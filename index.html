@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi - By Karan Thakur</title>
+    <style>
+        body {
+            text-align: center;
+            background: black; /* Black Background */
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            font-size: 50px;
+            text-shadow: 2px 2px 5px red;
+        }
+        p {
+            font-size: 24px;
+            text-shadow: 1px 1px 3px yellow;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 20px;
+            cursor: pointer;
+            background: red;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background: darkred;
+        }
+        #videoContainer {
+            display: none; /* Initially hidden */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎉 Happy Holi! 🎨</h1>
+        <p>Best Wishes from Karan Thakur ❤️</p>
+        <button onclick="playSong()">Play Rang Barse 🎶</button>
+
+        <div id="videoContainer">
+            <iframe id="holiSong" width="1" height="1" 
+                src="https://www.youtube.com/embed/Jf92MOkrbEw?autoplay=1&mute=1" 
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <script>
+        function playSong() {
+            document.getElementById("videoContainer").style.display = "block";
+            document.getElementById("holiSong").src = "https://www.youtube.com/embed/Jf92MOkrbEw?autoplay=1";
+        }
+    </script>
+</body>
+</html>
